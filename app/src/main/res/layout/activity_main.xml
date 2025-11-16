@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Поле для ввода суммы вклада -->
+    <TextView
+        android:id="@+id/labelAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сумма вклада:"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/depositAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите сумму"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Группа радиокнопок для выбора срока вклада -->
+    <TextView
+        android:id="@+id/labelTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Срок"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/termGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 3 месяца -->
+        <RadioButton
+            android:id="@+id/radio_3months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 месяца (3%)"/>
+
+        <!-- 6 месяцев -->
+        <RadioButton
+            android:id="@+id/radio_6months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6 месяцев (5%)"/>
+
+        <!-- 1 год -->
+        <RadioButton
+            android:id="@+id/radio_12months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="год (9%)"/>
+
+    </RadioGroup>
+
+    <!-- Кнопка для расчета вклада -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>
